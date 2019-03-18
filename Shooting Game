@@ -1,3 +1,9 @@
+var song;
+
+function preload () {
+  	song = loadSound("Explode.mp3");
+}
+
 var leftScore = 0;
 var rightScore = 0;
 
@@ -97,6 +103,7 @@ function draw() {
 
   //ball 1 hits
   if (ball.x >= -10 && ball.x <= 0 && ball.y >= leftY && ball.y <= leftY + playerHeight){
+  song.play();
    fill(0, 168, 107);//green
     text("Victory", 420, 200); //text
   fill(255, 0, 0);
