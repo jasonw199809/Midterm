@@ -106,18 +106,23 @@ function draw() {
   song.play();
    fill(0, 168, 107);//green
     text("Victory", 420, 200); //text
-  fill(255, 0, 0);
+   fill(255, 0, 0, 100);
+    rect(0,0,600,800)
+    fill(0, 0, 0);
     text("Defeat", 110, 200); //text
-  rightScore ++
+ 
+    rightScore ++
   noLoop();
 	}
 
   //ball 2 hits
   if (ball2.x <= 620 && ball2.x >= 600 && ball2.y >= rightY && ball2.y <= rightY + playerHeight){
-  // todo: add sound for hitting here
+  song.play();
   fill(0, 168, 107);//green
   text("Victory", 110, 200); //text
-  fill(255, 0, 0);
+  fill(255, 0, 0, 100);
+  rect(900, 0,1200, 800)
+  fill(0, 0, 0);
   text("Defeat", 420, 200); //text
   leftScore ++
   noLoop();
