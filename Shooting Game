@@ -38,18 +38,22 @@ function draw() {
 
   // Draw the board
   line(width / 2, 0, width / 2, height);
-
+	noFill()
+  ellipse(width / 2, 210, 100);
   // Draw the players
   rectMode(CORNER);
+  fill(231,41,57)
   rect(0, leftY, playerWidth, playerHeight);
+  fill(17,50,200)
   rect(width - playerWidth - 1, rightY, playerWidth, playerHeight);
 
 
   // Draw the balls
   rectMode(CENTER);
-  rect(ball.x, ball.y, 20, 20)//ball
+   fill(255,255,255)
+  ellipse(ball.x, ball.y, 20, 20)//ball
 	rectMode(CENTER);
-  rect(ball2.x, ball2.y, 20, 20)//ball2
+  ellipse(ball2.x, ball2.y, 20, 20)//ball2
 
   //shoot the ball, press space
  	if (keyIsDown(32)) { //Right Fire Ball
